@@ -1,0 +1,5 @@
+# Legal Automation System Configuration
+api_token: "hf-token"  # Get this from huggingface.co
+watch_dir: "./input"  # Directory to monitor for new files
+output_dir: "./output"  # Directory for analysis reports
+log_level: "DEBUG"
