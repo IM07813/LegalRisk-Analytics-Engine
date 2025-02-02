@@ -1,87 +1,94 @@
-# LegalSentry Pro 🔍
+# LegalRisk Analytics Engine
 
-## Advanced Legal Document Analysis & Risk Assessment System
+## Enterprise-Grade Legal Document Risk Analysis Platform
 
-LegalSentry Pro is a sophisticated automated system that performs real-time risk analysis on legal documents using natural language processing and machine learning. This enterprise-grade solution continuously monitors document directories, automatically processes new legal documents, and generates comprehensive risk assessment reports.
+LegalRisk Analytics Engine is a sophisticated automated platform that leverages advanced natural language processing and machine learning to perform comprehensive risk assessment of legal documents in real-time. This robust solution provides enterprise-level document monitoring, analysis, and risk reporting capabilities designed for legal departments and compliance teams.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Python](https://img.shields.io/badge/python-3.8%2B-blue)
-![Status](https://img.shields.io/badge/status-production--ready-green)
+## Key Features
 
-## 🌟 Key Features
+- Real-time Document Monitoring & Analysis
+  - Continuous monitoring of document directories
+  - Automatic processing of new legal documents
+  - Intelligent document deduplication
+  - Multi-threaded concurrent processing
 
-- **Real-time Document Monitoring**: Automatically detects and processes new legal documents in specified directories
-- **Advanced Risk Analysis**: Multi-factor risk assessment using sentiment analysis and keyword detection
-- **Concurrent Processing**: Efficiently handles multiple documents simultaneously using thread pools
-- **Intelligent Deduplication**: Prevents redundant processing using document hashing
-- **Configurable Risk Weights**: Customizable risk assessment parameters for different legal contexts
-- **Detailed Reporting**: Generates markdown reports with risk scores, key findings, and actionable insights
-- **Persistent Storage**: SQLite database integration for historical analysis and document tracking
-- **Robust Error Handling**: Comprehensive logging and fault tolerance mechanisms
+- Advanced Risk Assessment
+  - Machine learning-based sentiment analysis
+  - Configurable risk weight system
+  - Multi-factor risk evaluation
+  - Section-level granular analysis
 
-## 🛠️ Technical Architecture
-
-- **Document Processing Pipeline**:
-  - File system monitoring using Watchdog
-  - Document sectioning and analysis
-  - Concurrent processing with ThreadPoolExecutor
-  - Risk score calculation and categorization
-
-- **Analysis Components**:
-  - Sentiment analysis using HuggingFace's FinBERT model
-  - Keyword detection with configurable risk weights
-  - Section-level and document-level risk assessment
-
-- **Storage & Reporting**:
-  - SQLite database for document tracking
+- Enterprise-Ready Architecture
   - Thread-safe database operations
-  - Markdown report generation
   - Comprehensive logging system
+  - Configurable processing parameters
+  - Fault-tolerant operation
 
-## 📋 Prerequisites
+- Detailed Reporting
+  - Risk score calculation and categorization
+  - Key findings identification
+  - Risk factor analysis
+  - Markdown report generation
 
-- Python 3.8 or higher
-- HuggingFace API token for sentiment analysis
-- Required Python packages (see requirements.txt)
+## Technical Architecture
 
-## 🚀 Installation
+### Core Components
 
-1. Clone the repository:
+1. Document Processing Pipeline
+   - File system monitoring with Watchdog
+   - Concurrent processing using ThreadPoolExecutor
+   - Document sectioning and analysis
+   - Risk score computation
+
+2. Analysis Engine
+   - Integration with HuggingFace's FinBERT model
+   - Configurable keyword detection system
+   - Multi-level risk assessment
+   - Sentiment analysis processing
+
+3. Data Management
+   - SQLite database integration
+   - Thread-safe operations
+   - Document hash tracking
+   - Historical analysis storage
+
+## Prerequisites
+
+- Python 3.8+
+- HuggingFace API token
+- Required packages:
+  - watchdog
+  - requests
+  - pyyaml
+  - sqlite3
+
+## Installation
+
 ```bash
-git clone https://github.com/yourusername/legalsentry-pro.git
-cd legalsentry-pro
-```
+# Clone repository
+git clone https://github.com/yourusername/legalrisk-analytics.git
+cd legalrisk-analytics
 
-2. Install required packages:
-```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# Configure application
+cp config.example.yaml config.yaml
+# Edit config.yaml with your settings
 ```
 
-3. Create a configuration file (`config.yaml`):
+## Configuration
+
+Example configuration (config.yaml):
 ```yaml
 api_token: 'your-huggingface-api-token'
 watch_dir: './docs'
 output_dir: './reports'
 db_path: 'legal_analyses.db'
 max_workers: 4
-```
+request_timeout: 30
+max_retries: 5
 
-## 💻 Usage
-
-1. Start the monitoring system:
-```bash
-python legal_automation.py
-```
-
-2. Place legal documents in the watch directory (`./docs` by default)
-
-3. Monitor the output directory (`./reports`) for generated analysis reports
-
-## ⚙️ Configuration
-
-The system can be customized through the `config.yaml` file:
-
-```yaml
 risk_weights:
   legal: 1.5
   financial: 1.4
@@ -91,60 +98,82 @@ risk_weights:
 risk_thresholds:
   high: 0.7
   medium: 0.4
-
-max_retries: 5
-request_timeout: 30
 ```
 
-## 📊 Output Format
+## Usage
+
+1. Start the analysis engine:
+```bash
+python legal_automation.py
+```
+
+2. System will automatically:
+   - Monitor specified directory for new documents
+   - Process documents using configured parameters
+   - Generate risk analysis reports
+   - Store results in database
+
+## Risk Analysis Output
 
 Analysis reports include:
-- Overall risk score and category
-- Key findings from document sections
-- Identified risk factors
-- Analysis summary statistics
-- Section-by-section breakdown
+- Document risk score (0-1 scale)
+- Risk categorization (High/Medium/Low)
+- Section-by-section analysis
+- Key findings and risk factors
+- Processing statistics
 
-## 🔒 Security Considerations
+## Security Considerations
 
-- API tokens should be stored securely
-- Document access permissions should be properly configured
-- Regular backup of the SQLite database is recommended
-- Monitor system logs for potential issues
+1. Access Control
+   - Secure API token storage
+   - Proper file permissions
+   - Database access controls
 
-## 🤝 Contributing
+2. Data Protection
+   - Regular database backups
+   - Document hash verification
+   - Error logging and monitoring
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+## Development Highlights
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🌟 Why LegalSentry Pro?
-
-This project demonstrates advanced proficiency in:
-- Complex system architecture design
-- Concurrent programming and thread management
-- Natural Language Processing integration
-- Database design and management
+This platform demonstrates expertise in:
+- Advanced Python development
+- Concurrent programming
+- Natural Language Processing
+- Enterprise system architecture
+- Database management
 - Error handling and logging
 - Configuration management
-- File system operations
 - API integration
-- Document processing and analysis
 
-Perfect for showcasing skills in:
-- Python development
-- System design
-- Machine learning integration
-- Enterprise software development
+## Professional Applications
+
+Ideal for:
+- Legal departments
+- Compliance teams
+- Risk management units
+- Document processing centers
 - Legal tech solutions
+- Regulatory compliance
 
-## 📧 Contact
+## Contributing
 
-For questions and feedback:
-- Email: your.email@example.com
-- GitHub Issues: [Project Issues Page]
+1. Fork the repository
+2. Create feature branch
+3. Commit changes
+4. Submit pull request
+
+For major changes, please open an issue first.
+
+## License
+
+MIT License - See LICENSE file for details.
+
+## Support
+
+- Submit issues via GitHub
+- Contact: your.email@example.com
 
 ---
-*Note: This project is for demonstration purposes and may require additional security measures for production use.*
+
+*Note: This platform is designed for professional use and may require customization for specific deployment environments.*
