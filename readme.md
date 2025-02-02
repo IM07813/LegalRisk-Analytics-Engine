@@ -66,8 +66,8 @@ LegalRisk Analytics Engine is a sophisticated automated platform that leverages 
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/legalrisk-analytics.git
-cd legalrisk-analytics
+git clone https://github.com/IM07813/LegalRisk-Analytics-Engine.git
+cd LegalRisk-Analytics-Engine
 
 # Install dependencies
 pip install -r requirements.txt
@@ -172,7 +172,7 @@ MIT License - See LICENSE file for details.
 ## Support
 
 - Submit issues via GitHub
-- Contact: your.email@example.com
+- Contact: waqar078132@proton.me
 
 ---
 
