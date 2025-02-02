@@ -1,8 +1,0 @@
-2025-02-02 21:29:35,943 - ERROR: Critical error in main execution: Missing required configuration fields: log_dir
-2025-02-02 22:06:36,685 - root - INFO - Started monitoring: ./input
-2025-02-02 22:06:49,447 - root - INFO - Processing: ./input/Section 1 Poor Financial.txt
-2025-02-02 22:06:51,351 - root - INFO - Completed analysis for: ./input/Section 1 Poor Financial.txt
-2025-02-02 22:09:23,758 - root - INFO - Processing: ./input/positive-sentiment.txt
-2025-02-02 22:09:23,775 - root - INFO - Completed analysis for: ./input/positive-sentiment.txt
-2025-02-02 22:10:05,692 - root - INFO - Processing: ./input/positive-sentiment.txt
-2025-02-02 22:10:06,505 - root - INFO - Completed analysis for: ./input/positive-sentiment.txt
