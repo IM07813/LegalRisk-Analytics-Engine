@@ -1,13 +1,13 @@
 # LegalRisk Analytics Engine
 
-## Enterprise-Grade Legal Document Risk Analysis Platform
+## Legal Document Risk Analysis Platform
 
-LegalRisk Analytics Engine is a sophisticated automated platform that leverages advanced natural language processing and machine learning to perform comprehensive risk assessment of legal documents in real-time. This robust solution provides enterprise-level document monitoring, analysis, and risk reporting capabilities designed for legal departments and compliance teams.
+LegalRisk Analytics Engine is a sophisticated automated platform that leverages advanced natural language processing and machine learning to perform comprehensive risk assessment of legal documents in real-time. This robust solution provides document monitoring, analysis, and risk reporting capabilities designed for legal departments and compliance teams.
 
 ## Key Features
 
 - Real-time Document Monitoring & Analysis
-  - Continuous monitoring of document directories
+  - Continuous monitoring of document directories( input and output directories )
   - Automatic processing of new legal documents
   - Intelligent document deduplication
   - Multi-threaded concurrent processing
@@ -81,30 +81,20 @@ cp config.example.yaml config.yaml
 
 Example configuration (config.yaml):
 ```yaml
-api_token: 'your-huggingface-api-token'
-watch_dir: './docs'
-output_dir: './reports'
-db_path: 'legal_analyses.db'
-max_workers: 4
-request_timeout: 30
-max_retries: 5
+# Legal Automation System Configuration
+api_token: "hf-token"  # Get this from huggingface.co
+watch_dir: "./input"  # Directory to monitor for new files
+output_dir: "./output"  # Directory for analysis reports
+log_level: "DEBUG"
 
-risk_weights:
-  legal: 1.5
-  financial: 1.4
-  reputation: 1.3
-  operational: 1.2
 
-risk_thresholds:
-  high: 0.7
-  medium: 0.4
 ```
 
 ## Usage
 
 1. Start the analysis engine:
 ```bash
-python legal_automation.py
+python3 legal_automation.py
 ```
 
 2. System will automatically:
@@ -169,7 +159,7 @@ For major changes, please open an issue first.
 
 MIT License - See LICENSE file for details.
 
-## Support
+
 
 - Submit issues via GitHub
 - Contact: waqar078132@proton.me
