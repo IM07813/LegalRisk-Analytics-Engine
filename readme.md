@@ -1,4 +1,4 @@
-# LegalRisk Analytics Engine
+#. LegalRisk Analytics Engine
 
 ## Legal Document Risk Analysis Platform
 
